@@ -12,16 +12,16 @@ module.exports = {
     description: "A Gatsby Starter for building homepages with WordPress",
   },
   plugins: [
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
+    "gatsby-plugin-vanilla-extract",
     {
       resolve: "gatsby-source-wordpress",
       options: {
         url: process.env.WPGRAPHQL_URL,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-vanilla-extract",
     {
       resolve: "gatsby-plugin-manifest",
       options: {

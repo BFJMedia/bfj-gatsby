@@ -1,6 +1,14 @@
 const { getGatsbyImageResolver } = require("gatsby-plugin-image/graphql-utils")
 
+
 exports.createSchemaCustomization = async ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type WpBlockAttributesObject {
+      foobar: String
+    }
+  `;
+  createTypes(typeDefs);
   actions.createFieldExtension({
     name: "wpImagePassthroughResolver",
     extend(options) {
@@ -546,4 +554,6 @@ exports.createPages = ({ actions }) => {
     component: require.resolve("./src/components/footer.js"),
   })
 }
+
+
       
