@@ -4,11 +4,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const siteConfig = require('./config.js');
-
 module.exports = {
   siteMetadata: {
-    url: siteConfig.url,
+    siteUrl: "https://bfjgatsbymain.gatsbyjs.io/",
     title: "Gatsby WordPress Homepage Starter",
     author: `Gatsby`,
     description: "A Gatsby Starter for building homepages with WordPress",
