@@ -1,7 +1,5 @@
 .env*
 !.env.EXAMPLE
-!.env.production
-!.env.development
 node_modules
 .cache
 public
